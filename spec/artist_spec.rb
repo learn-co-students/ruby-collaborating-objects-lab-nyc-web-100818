@@ -39,7 +39,7 @@ describe 'Artist' do
     end
 
     it 'Creates new instance of Artist if none exist' do
-      artist_1 = Artist.find_or_create_by_name("Drake")
+      artist_1 = Artist.find_or_create_by_name("Michael Jackson")
       expect(artist_1.class).to eq(Artist)
     end
   end
