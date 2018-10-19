@@ -1,3 +1,4 @@
+require 'pry'
 describe 'Song' do
   let(:song) {Song.new('Man in the Mirror')}
   let(:file_name) {'Michael Jackson - Black or White - pop.mp3'}
@@ -30,7 +31,8 @@ describe 'Song' do
     end
 
     it 'associates new song instance with the artist from the filename' do
-      Artist.class_variable_set("@@all",[])
+      # Artist.class_variable_set("@@all",[])
+      # binding.pry
       new_instance = Song.new_by_filename(file_name)
       expect(new_instance.artist.name).to eq('Michael Jackson')
       expect(Artist.all.size).to eq(1)
